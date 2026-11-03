@@ -41,7 +41,34 @@
 
 // EX 4
 
+Console.WriteLine("Digite um número:");
+int? a = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Digite outro número:");
+int? b = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Escolha 1 para somar e 2 para multiplicar:");
+int? calculo = int.Parse(Console.ReadLine()!);
+
+if (calculo == 1)
+{
+    int resultado = Somar(a, b);
+    Console.WriteLine(resultado);
+}
+else
+{
+    int resultado = Multiplicar(a, b);
+    Console.WriteLine(resultado);
+}
+
+
 static int Somar(int a, int b)
 {
     return a + b;
 }
+
+static int  Multiplicar(int a, int b)
+{
+    return a * b;
+}
+
